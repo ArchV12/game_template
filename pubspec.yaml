@@ -1,0 +1,36 @@
+name: game_template
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  build_runner: ^2.4.6
+  desktop_window: ^0.4.0
+  flame: ^1.8.1
+  flame_audio: ^2.0.4
+  flutter:
+    sdk: flutter
+  google_fonts: ^5.1.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  hive_generator: ^2.0.0
+  http: ^1.0.0
+  json_annotation: ^4.8.1
+  json_serializable: ^6.7.1
+
+dependency_overrides:
+  audioplayers:
+    git:
+      url: https://github.com/bluefireteam/audioplayers.git
+      path: 'packages/audioplayers'
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
