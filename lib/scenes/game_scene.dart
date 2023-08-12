@@ -44,6 +44,17 @@ class GameScene extends Component with HasGameRef<GameTemplate> {
 
     world.add(enterpriseComponent);
 
+    cameraComponent.viewport.add(
+      GameTextComponent(
+        position: cameraComponent.viewport.size,
+        anchor: Anchor.bottomRight,
+        text: 'Where is the Flutter?',
+        tapCallback: (component) {
+          gameRef.router.pushNamed('flutterDialog');
+        },
+      ),
+    );
+
     return super.onLoad();
   }
 }

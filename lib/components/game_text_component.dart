@@ -49,7 +49,7 @@ class GameTextComponent extends TextComponent with TapCallbacks {
 
   @override
   void onTapDown(TapDownEvent event) {
-    tapCallback?.call();
+    tapCallback?.call(this);
     super.onTapDown(event);
   }
 }
