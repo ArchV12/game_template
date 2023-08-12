@@ -4,8 +4,13 @@ import 'package:flame/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class StandardGameText extends TextComponent with Tappable {
-  StandardGameText({
+// A class extends the normal TextComponent, to include
+// ability to set a tap callback and utilize a google font.
+
+// This class could be expanded to include much more functionality,
+// but the basics are provided here.
+class GameTextComponent extends TextComponent with TapCallbacks {
+  GameTextComponent({
     required super.text,
     required super.position,
     super.priority,
@@ -14,10 +19,10 @@ class StandardGameText extends TextComponent with Tappable {
     super.scale,
     super.size,
     this.fontSize = 20,
-    this.touchCallback,
+    this.tapCallback,
     this.color = Colors.white,
     this.fontWeight = FontWeight.w500,
-    this.shadowOffset = const Offset(5.0, 5.0),
+    this.shadowOffset = const Offset(3.0, 3.0),
   }) {
     textRenderer = TextPaint(
       style: GoogleFonts.rockSalt(
@@ -39,15 +44,12 @@ class StandardGameText extends TextComponent with Tappable {
   Color color;
   double fontSize;
   FontWeight fontWeight;
-  Function? touchCallback;
+  Function? tapCallback;
   Offset shadowOffset;
 
   @override
-  bool onTapDown(TapDownInfo info) {
-    if (touchCallback != null) {
-      touchCallback!();
-      return true;
-    }
-    return false;
+  void onTapDown(TapDownEvent event) {
+    tapCallback?.call();
+    super.onTapDown(event);
   }
 }
