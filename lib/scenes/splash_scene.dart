@@ -8,6 +8,7 @@ import 'package:game_template/components/game_text_component.dart';
 import 'package:game_template/main.dart';
 import 'package:flutter/material.dart';
 
+// Splash screen scene.  This is the initalRoute specified in the game_router
 class SplashScene extends Component with HasGameRef<GameTemplate> {
   final world = World();
   late CameraComponent cameraComponent;

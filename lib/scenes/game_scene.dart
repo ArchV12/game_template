@@ -6,6 +6,7 @@ import 'package:flame/components.dart';
 import 'package:game_template/components/components_barrel.dart';
 import 'package:game_template/main.dart';
 
+// This is the main game scene.
 class GameScene extends Component with HasGameRef<GameTemplate> {
   final world = World();
   late CameraComponent cameraComponent;

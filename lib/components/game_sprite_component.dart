@@ -3,7 +3,6 @@ import 'package:flame/effects.dart';
 import 'package:flame/events.dart';
 
 // An extension of the basic SpriteComponent.  Implements tapping
-//
 class GameSpriteComponent extends SpriteComponent with TapCallbacks {
   GameSpriteComponent({
     super.anchor,

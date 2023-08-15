@@ -34,6 +34,8 @@ class GameTemplate extends FlameGame with KeyboardEvents, DragCallbacks, ScrollD
   @override
   Future<void> onLoad() async {
     debugPrint("Game is loading...");
+
+    // Set up and initialize various things
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
     await Flame.device.setLandscape();
     _setWindowSize();
