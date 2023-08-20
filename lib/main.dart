@@ -15,7 +15,7 @@ import 'package:game_template/game_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:io';
 
-class GameTemplate extends FlameGame with KeyboardEvents, DragCallbacks, ScrollDetector, ScaleDetector {
+class GameTemplate extends FlameGame with DragCallbacks, ScrollDetector, ScaleDetector, HasKeyboardHandlerComponents {
   late final RouterComponent router;
   late CameraComponent? cameraComponent;
   late AudioManager audioManager;
